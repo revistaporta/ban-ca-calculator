@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Bắn Cá – Tính Lãi & Tỷ Lệ Trúng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Công Cụ Bắn Cá</h1>
+        <div class="tabs">
+            <button onclick="showTab('profit')" id="tab-profit" class="active">Tính Lãi/Lỗ</button>
+            <button onclick="showTab('accuracy')" id="tab-accuracy">Ước Lượng Tỷ Lệ Trúng</button>
+        </div>
+
+        <section id="profit" class="tab-content">
+            <label>Số xu mỗi lần bắn:</label>
+            <input type="number" id="xuPerShot">
+            <label>Số lần bắn:</label>
+            <input type="number" id="numShots">
+            <label>Tổng xu thu được:</label>
+            <input type="number" id="xuEarned">
+            <button onclick="calculateProfit()">Tính Kết Quả</button>
+            <p id="profitResult"></p>
+        </section>
+
+        <section id="accuracy" class="tab-content hidden">
+            <label>Tổng số lần bắn:</label>
+            <input type="number" id="totalShots">
+            <label>Số lần trúng:</label>
+            <input type="number" id="hits">
+            <button onclick="calculateAccuracy()">Tính Tỷ Lệ</button>
+            <p id="accuracyResult"></p>
+        </section>
+
+        <footer>
+            <a href="https://revistaporta.com/" target="_blank">© Revista Porta – Top Game Bắn Cá Online Đổi Thưởng Uy Tín 2025</a>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
